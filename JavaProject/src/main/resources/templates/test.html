@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form  method="post" th:object="${category}" th:action="@{/admin/add_category}" enctype="multipart/form-data">
+	<table class="table table-striped">
+          <tr>
+              <td><label path="name">Category Name<label></td>
+              <td> 
+                  <input path="name"/>
+                  <errors path="name"/>
+                  <td th:text="${er}">Text ...</td>
+              </td> 
+          </tr>
+          <tr>
+              <td><label path="pic"> Upload Picture</label></td>
+
+              <td> 
+                  <input type="file" path="pic" name="pic" accept="image/png, image/jpeg, image/jpg" />
+              </td>
+          </tr>
+          <tr>
+              <td><label path="descreption"> Add a Descreption</label></td>
+
+              <td> 
+                  <errors path="descreption"/>
+                  <input path="descreption"/>
+                  <td th:text="${er}">Text ...</td>
+              </td>
+          </tr>
+	</table>
+  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+  <button type="submit" class="btn btn-primary">Add Category</button>
+</form>
+
+
+</body>
+</html>
