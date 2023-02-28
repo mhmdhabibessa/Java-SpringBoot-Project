@@ -22,7 +22,7 @@ import com.axsosacademy.demo.services.UserService;
 import com.axsosacademy.demo.validetors.UserValidator;
 
 @Controller
-public class AyatControllers {
+public class PaintingControllers {
 	
     private UserService userService;
     private UserValidator userValidator;
@@ -31,7 +31,7 @@ public class AyatControllers {
     
 
     
-    public AyatControllers(UserService userService, UserValidator userValidator , CategoryService categoryService, PaintingService paintingService) {
+    public PaintingControllers(UserService userService, UserValidator userValidator , CategoryService categoryService, PaintingService paintingService) {
 		this.userService = userService;
 		this.userValidator = userValidator;
 		this.categoryService = categoryService;

@@ -30,7 +30,7 @@ import com.axsosacademy.demo.services.UserService;
 import com.axsosacademy.demo.validetors.UserValidator;
 
 @Controller
-public class MahmoudControllers {
+public class AdminControllers {
   
 
     private final UserService userService;
@@ -39,7 +39,7 @@ public class MahmoudControllers {
     private final CategoryService categoryService;
     
 
-public MahmoudControllers(UserService userService, PaintingService paintingService, UserValidator userValidator,
+public AdminControllers(UserService userService, PaintingService paintingService, UserValidator userValidator,
 			CategoryService categoryService) {
 		this.userService = userService;
 		this.paintingService = paintingService;
